@@ -1,0 +1,12 @@
+public class declare {
+    public static void main(String [] args)
+    {
+        int a;
+        double b;
+        String s;
+        a=69;
+        b=0.69;
+        s="amar";
+        System.out.println(a +" "+b+ "  "+ s);
+    }
+}
