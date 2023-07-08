@@ -1,0 +1,115 @@
+1)Interface Example
+ interface printable{  
+void print();  
+}  
+class A6 implements printable{  
+public void print(){System.out.println("Hello");}  
+  
+public static void main(String args[]){  
+A6 obj = new A6();  
+obj.print();  
+ }  
+}  
+
+
+2)   
+ 
+// abstract class
+abstract class A {
+    // abstract method
+    // it has no body
+    abstract void m1();
+ 
+    // concrete methods are still
+    // allowed in abstract classes
+    void m2()
+    {
+        System.out.println("This is "
+                           + "a concrete method.");
+    }
+}
+ 
+// concrete class B
+class B extends A {
+    // class B must override m1() method
+    // otherwise, compile-time
+    // exception will be thrown
+    void m1()
+    {
+        System.out.println("B's "
+                           + "implementation of m1.");
+    }
+}
+ 
+// Driver class
+public class AbstractDemo {
+    // main function
+    public static void main(String args[])
+    {
+        B b = new B();
+        b.m1();
+        b.m2();
+    }
+}
+
+
+3)interface fab{  
+    void say(String msg);  
+}  
+public class FunctionalInterfaceExample implements sayable{  
+    public void say(String msg){  
+        System.out.println(msg);  
+    }  
+    public static void main(String[] args) {  
+        FunctionalInterfaceExample fie = new FunctionalInterfaceExample();  
+        fie.say("Hello there");  
+    }  
+}  
+
+4)An Interface is a blue print of a class. It contains abstract methods and static constants.
+interfaces can have abstract methods and variables. It cannot have a method body.
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. 
+It is used to achieve multiple inheritance in java.
+
+5)Interfaces are used in Java to achieve abstraction. By using the implements keyword, a java class can implement an interface.
+Interface are used to achieve multiple inheritance. 
+
+6)Lambda Expressions were added in Java 8. A lambda expression is a short block of code which takes in parameters and returns a value.
+
+7)A lambda expression passed in a method that has an argument of type of functional interface.
+ If we need to pass a lambda expression as an argument, the type of parameter receiving the lambda expression argument must be of a functional interface type.
+
+8)A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface.
+ A functional interface can have any number of default methods.
+
+9)Lambda expressions improve code readability and do not require interpretation. Lambdas allow you to write concise code. It encourages the use of functional programming.
+ It simplifies variable scope and encourages code reusability.
+
+10)The lambda must contain the same number of parameters as the delegate type. 
+Each input parameter in the lambda must be implicitly convertible to its corresponding delegate parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
