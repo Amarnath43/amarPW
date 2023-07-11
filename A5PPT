@@ -1,0 +1,126 @@
+1)Exception is an eventr that disrupts the normal flow of program during runtime.
+When an exception occurs within method,it creates an object called exception that contains the information about the exception like name ,description of exception and state of program.
+
+2)Exception handling is a mechanism to handle the runtime errors (Exceptions). 
+Exception handling is used to avoid disruption of normal flow of program.
+An Exception can be handled using try and catch block.
+
+3)Checked Exception:
+These exceptions are checked at compile time.If some code within the method exception then the method must either handle or it must specify the exception using throws keyword
+ex: File not found
+Unchecked Exception:
+These are the exceptions that are not checked at compile time.
+If a program throws an unchecked exception, and even if we didnt handle or declare it, the program would not give a compilation error.
+Runtime exceptions are unchecked exceptions
+Ex:Arithmatic exceptions,ArrayIndexOutOfBound
+
+4)Throw:
+Java throw keyword is used throw an exception explicitly in the code, inside the function or the block of code.
+The throw keyword is followed by an instance of Exception to be thrown.
+throw is used within the method.
+We are allowed to throw only one exception at a time i.e. we cannot throw multiple exceptions.
+
+
+
+Throws:
+Java throws keyword is used in the method signature to declare an exception which might be thrown by the function while the execution of the code.
+The throws keyword is followed by class names of Exceptions to be thrown.
+throws is used with the method signature.
+We can declare multiple exceptions using throws keyword that can be thrown by the method. For example, main() throws IOException, SQLException.
+
+
+5)
+Multithreading is a function of the CPU that permits multiple threads to run independently while sharing the same process resources.
+
+Advantages of multithreading
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+2) You can perform many operations together, so it saves time.
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+
+6)
+class InvalidAgeException  extends Exception  
+{  
+    public InvalidAgeException (String str)  
+    {  
+        // calling the constructor of parent Exception  
+        super(str);  
+    }  
+}  
+    
+// class that uses custom exception InvalidAgeException  
+public class TestCustomException1  
+{  
+  
+    // method to check the age  
+    static void validate (int age) throws InvalidAgeException{    
+       if(age < 18){  
+  
+        // throw an object of user defined exception  
+        throw new InvalidAgeException("age is not valid to vote");    
+    }  
+       else {   
+        System.out.println("welcome to vote");   
+        }   
+     }    
+  
+    // main method  
+    public static void main(String args[])  
+    {  
+        try  
+        {  
+            // calling the method   
+            validate(13);  
+        }  
+        catch (InvalidAgeException ex)  
+        {  
+            System.out.println("Caught the exception");  
+    
+            // printing the message from InvalidAgeException object  
+            System.out.println("Exception occured: " + ex);  
+        }  
+  
+        System.out.println("rest of the code...");    
+    }  
+}  
+
+
+7)Exception can be handled using try and catch block. The critical statements are placed inside the try block ,try blocks throws an exception to catch block and if there is any exception.
+catch block cathes the exception object thrown by try block and handles it.
+
+Ex:
+int a=6,b=0;
+int c;
+try
+{
+c=a/b;
+}
+catch(ArithmaticException e)
+{
+System.out.println("cannot divide by zero" + e);
+}
+
+8)
+Thread is the smallest part of the process that allows a program to operate more efficiently by running multiple tasks simultaneously.
+
+9)There are two ways to create a thread:
+1)By extending Thread class
+2)By implementing Runnable interface.
+
+
+10)In java, garbage means unreferenced objects. Garbage Collection is process of reclaiming the runtime unused memory automatically.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
